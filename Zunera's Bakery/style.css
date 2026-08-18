@@ -1,0 +1,639 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf2;
+    color:#4b2e24;
+    line-height:1.6;
+}
+
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:#fffaf2;
+    box-shadow:0 2px 12px #4b2e2420;
+}
+
+.navbar{
+    min-height:70px;
+    padding:12px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font:700 27px 'Playfair Display';
+    color:#4b2e24;
+}
+
+.logo span,.subtitle{
+    color:#b58b45;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#4b2e24;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#b58b45;
+}
+
+
+/* ---------- COMMON ---------- */
+
+section{
+    padding:70px 8%;
+}
+
+.subtitle{
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.btn,.outline-btn{
+    display:inline-block;
+    padding:11px 25px;
+    margin-top:15px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn{
+    background:#b58b45;
+    color:white;
+    border:1px solid #b58b45;
+}
+
+.btn:hover{
+    background:#4b2e24;
+    border-color:#4b2e24;
+}
+
+.outline-btn{
+    border:1px solid #b58b45;
+    color:#8a622c;
+}
+
+.outline-btn:hover{
+    background:#b58b45;
+    color:white;
+}
+
+
+/* ---------- HOME SLIDER ---------- */
+
+.hero{
+    height:620px;
+    padding:0;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:1s;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    height:100%;
+    object-fit:cover;
+}
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(40,25,18,0.25);
+}
+
+.hero-text{
+    position:absolute;
+    z-index:2;
+    top:50%;
+    left:10%;
+    transform:translateY(-50%);
+    color:white;
+    max-width:600px;
+}
+
+.hero-text p:first-child{
+    color:#e0bd76;
+    letter-spacing:4px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    line-height:1.1;
+}
+
+.hero-text h2{
+    font-size:24px;
+    margin:10px 0;
+}
+
+.prev,.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:1px solid white;
+    border-radius:50%;
+    background:#0005;
+    color:white;
+    cursor:pointer;
+}
+
+.prev{left:25px}
+.next{right:25px}
+
+
+/* ---------- TEXT SECTIONS ---------- */
+
+.welcome,
+.featured,
+.menu-intro,
+.gallery-intro,
+.offers-intro,
+.why-us,
+.order-banner,
+.offer-note,
+.map-section{
+    text-align:center;
+}
+
+.welcome{
+    max-width:850px;
+    margin:auto;
+}
+
+.welcome h2,
+.featured h2,
+.menu-intro h2,
+.gallery-intro h2,
+.offers-intro h2{
+    font-size:38px;
+    margin:8px 0 15px;
+}
+
+.welcome p:not(.subtitle),
+.menu-intro p:not(.subtitle),
+.gallery-intro p:not(.subtitle),
+.offers-intro p:not(.subtitle){
+    color:#765f55;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.featured,
+.why-us,
+.menu-section:nth-of-type(odd),
+.order-banner,
+.offer-note,
+.map-section{
+    background:#f5eadb;
+}
+
+.product-container,
+.menu-container,
+.features{
+    max-width:1100px;
+    margin:35px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product-card,
+.menu-card,
+.feature-card{
+    background:#fffaf2;
+    box-shadow:0 8px 25px #4b2e2415;
+    transition:.3s;
+}
+
+.product-card:hover,
+.menu-card:hover,
+.feature-card:hover,
+.gallery-item:hover{
+    transform:translateY(-6px);
+}
+
+.product-card img,
+.menu-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.product-card h3,
+.product-card p,
+.menu-info{
+    padding:12px 20px 0;
+}
+
+.product-card p,
+.menu-info p,
+.feature-card p{
+    color:#765f55;
+    font-size:14px;
+}
+
+.menu-info strong{
+    color:#b58b45;
+}
+
+
+/* ---------- INNER PAGE BANNER ---------- */
+
+.page-banner{
+    height:300px;
+    background:linear-gradient(#4b2e24b8,#4b2e24b8),
+    url("images/bakery1.jpg") center/cover;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    color:white;
+}
+
+.page-banner p{
+    color:#e0bd76;
+    letter-spacing:4px;
+}
+
+.page-banner h1{
+    font-size:55px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-section,
+.contact-section{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    height:300px;
+    object-fit:cover;
+}
+
+.about-content h2,
+.contact-info h2,
+.contact-form h2{
+    font-size:38px;
+    margin:8px 0 20px;
+}
+
+.about-content p:not(.subtitle),
+.info-box p{
+    color:#765f55;
+    margin-bottom:12px;
+}
+
+.why-us h2{
+    font-size:38px;
+    margin:8px 0 30px;
+}
+
+.feature-card{
+    padding:30px 20px;
+    border-bottom:3px solid #b58b45;
+}
+
+.icon{
+    font-size:32px;
+}
+
+
+/* ---------- QUOTE ---------- */
+
+.quote{
+    background:#4b2e24;
+    color:white;
+    text-align:center;
+}
+
+.quote h2{
+    color:#f5dca7;
+    font-size:34px;
+}
+
+.quote p{
+    color:#ead5b8;
+}
+
+
+/* ---------- GALLERY ---------- */
+
+.gallery{
+    padding:20px 8% 70px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    height:290px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:25px 20px 15px;
+    color:white;
+    background:linear-gradient(transparent,#4b2e24e8);
+}
+
+
+/* ---------- OFFERS ---------- */
+
+.offers{
+    max-width:1100px;
+    margin:auto;
+}
+
+.offer-card{
+    display:grid;
+    grid-template-columns:42% 58%;
+    margin-bottom:30px;
+    background:#f5eadb;
+    overflow:hidden;
+}
+
+.offer-card:nth-child(even){
+    grid-template-columns:58% 42%;
+}
+
+.offer-card:nth-child(even) .offer-image{
+    order:2;
+}
+
+.offer-image{
+    position:relative;
+    min-height:280px;
+}
+
+.offer-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.discount{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#b58b45;
+    color:white;
+    padding:8px 12px;
+    font-size:12px;
+}
+
+.offer-content{
+    padding:40px;
+    align-self:center;
+}
+
+.offer-label{
+    color:#b58b45;
+    letter-spacing:3px;
+    font-size:11px;
+}
+
+.offer-content h2{
+    font-size:32px;
+}
+
+.offer-content p:not(.offer-label){
+    color:#765f55;
+}
+
+.birthday-offer{
+    text-align:center;
+    color:white;
+    background:linear-gradient(#4b2e24d9,#4b2e24d9),
+    url("images/cake.jpg") center/cover;
+}
+
+.birthday-offer h2{
+    color:#f5dca7;
+    font-size:40px;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.info-box{
+    border-left:3px solid #b58b45;
+    padding-left:15px;
+    margin:15px 0;
+}
+
+.info-box h3{
+    font-size:18px;
+}
+
+.contact-form{
+    background:#f5eadb;
+    padding:35px;
+}
+
+.contact-form form{
+    display:grid;
+    gap:13px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:13px;
+    border:1px solid #dbc6a8;
+    background:#fffaf2;
+    font-family:'Poppins';
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#b58b45;
+}
+
+.contact-form button{
+    cursor:pointer;
+    font-family:'Poppins';
+}
+
+.map-box{
+    max-width:1000px;
+    margin:25px auto;
+    padding:7px;
+    background:white;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#2f201b;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2{
+    color:#e0bd76;
+}
+
+footer p{
+    color:#d6c3b7;
+    font-size:13px;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px 18px;
+    }
+
+    .hero{
+        height:520px;
+    }
+
+    .hero-text h1{
+        font-size:45px;
+    }
+
+    .product-container,
+    .menu-container,
+    .features,
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-section,
+    .contact-section,
+    .offer-card,
+    .offer-card:nth-child(even){
+        grid-template-columns:1fr;
+    }
+
+    .offer-card:nth-child(even) .offer-image{
+        order:0;
+    }
+}
+
+
+@media(max-width:550px){
+
+    section{
+        padding:50px 5%;
+    }
+
+    .product-container,
+    .menu-container,
+    .features,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .page-banner{
+        height:240px;
+    }
+
+    .page-banner h1{
+        font-size:40px;
+    }
+
+    .hero-text{
+        left:8%;
+    }
+
+    .hero-text h1{
+        font-size:38px;
+    }
+
+    .about-image img{
+        height:300px;
+    }
+
+    .gallery-item{
+        height:270px;
+    }
+
+    .offer-content{
+        padding:30px 25px;
+    }
+
+    .contact-form{
+        padding:25px 20px;
+    }
+}
+

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zunera's Bakery | Home</title>
+
+    <!-- Elegant Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Zunera's <span>Bakery</span></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Hero / Image Slider -->
+<section class="hero">
+
+    <div class="slide active">
+        <img src="images/cake.jpg" alt="Delicious Chocolate Cake">
+        <div class="hero-text">
+            <p>WELCOME TO</p>
+            <h1>Zunera's Bakery</h1>
+            <h2>Freshly Baked. Lovingly Made.</h2>
+            <p>Delicious cakes, pastries and treats made specially for you.</p>
+            <a href="menu.html" class="btn">Explore Menu</a>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/pastry.jpg" alt="Fresh Bakery Pastries">
+        <div class="hero-text">
+            <p>BAKED WITH LOVE</p>
+            <h1>Sweet Moments</h1>
+            <h2>Made Extra Special</h2>
+            <a href="menu.html" class="btn">View Our Menu</a>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/bakery.jpg" alt="Elegant Bakery">
+        <div class="hero-text">
+            <p>YOUR HAPPY PLACE</p>
+            <h1>A Taste of Happiness</h1>
+            <h2>Every Bite Tells a Story</h2>
+            <a href="contact.html" class="btn">Visit Us</a>
+        </div>
+    </div>
+
+    <!-- Slider Buttons -->
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+</section>
+
+
+<!-- Welcome Section -->
+<section class="welcome">
+    <p class="subtitle">OUR STORY</p>
+    <h2>Welcome to Zunera's Bakery</h2>
+
+    <p>
+        At Zunera's Bakery, we believe every celebration deserves
+        something sweet. From delicious cakes to freshly baked pastries,
+        every treat is prepared with care, quality ingredients and lots of love.
+    </p>
+
+    <a href="about.html" class="outline-btn">Discover Our Story</a>
+</section>
+
+
+<!-- Featured Products -->
+<section class="featured">
+
+    <p class="subtitle">OUR SPECIALTIES</p>
+    <h2>Fresh From The Oven</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="images/chococake.jpg" alt="Chocolate Cake">
+            <h3>Chocolate Cake</h3>
+            <p>Rich, creamy and irresistibly delicious.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pastry.jpg" alt="Fresh Pastry">
+            <h3>Fresh Pastries</h3>
+            <p>Light, soft and freshly baked every day.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/cookies.jpg" alt="Cookies">
+            <h3>Homemade Cookies</h3>
+            <p>Crunchy, buttery and perfect with tea.</p>
+        </div>
+
+    </div>
+
+    <a href="menu.html" class="btn dark-btn">View Full Menu</a>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <h2>Zunera's Bakery</h2>
+    <p>Freshly baked with love ❤️</p>
+    <p>© 2026 Zunera's Bakery | All Rights Reserved</p>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
